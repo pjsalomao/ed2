@@ -13,12 +13,20 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "TabelaHash.h"
 
 /*
  * 
  */
 int main(int argc, char** argv) {
 
+    if (criaHash(337) != NULL)
+        printf ("Sucesso\n");
+    
+    Hash * ha = criaHash(337);
+    
+    destroiHash(ha);
+    
     return (EXIT_SUCCESS);
 }
 
