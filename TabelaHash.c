@@ -87,3 +87,62 @@ chaveDobra (int chave, int TABLE_SIZE)
     int parte2 = chave & (TABLE_SIZE-1); // faz operacao de E bit a bit ate o tamanho da tabela -1
     return (parte1 ^ parte2); //a posicao é gerada através da operacao de ou exclusivo entre as duas partes
 }
+
+int
+insere_hash_semcolisao (Hash *ha, struct aluno al)
+{
+    // primeiro verifica se a tabela hash nao é vazia ou esta cheia
+    if (ha == NULL || ha->qtd == ha->TABLE_SIZE)
+        return 0;
+    
+    //define qual campo é a chave
+    int chave = al.matricula;
+    
+    //chama funcao de hash apra calcular a posicao
+    //sera usado chave divisao
+    int pos = chaveDivisao (chave, ha->TABLE_SIZE);
+    
+    struct aluno * novo = (struct aluno*) malloc (sizeof(struct aluno));
+    if (novo == NULL)
+        return 0;
+    *novo = al;
+    
+    ha->itens[pos] = novo;
+    ha->qtd++;
+    
+    
+    return 1;
+    
+}
+
+int
+buscaHash_semColisao (Hash *ha, int mat, struct aluno * al)
+{
+    //verifica se a tabela nao esta vazia
+    if (ha == NULL)
+        return 0;
+    
+    //encontra a posicao da chave
+    int pos = chaveDivisao (mat, ha->TABLE_SIZE);
+    
+    *al = *ha->itens[pos];
+    
+    return 1;
+}
+
+int
+verificaOcupacao (Hash * ha)
+{
+    int i, qnull=0;
+    
+    
+    for (i=0; i<ha->TABLE_SIZE; i++)
+    {
+        if (ha->itens[i] == NULL)
+        qnull++;    
+    }
+    
+    if (((qnull * ha->TABLE_SIZE)/100) >= 0.75)
+        return 1;
+    else return 0;
+}

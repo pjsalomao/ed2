@@ -39,3 +39,10 @@ typedef struct hash Hash;
 Hash * criaHash (int TABLE_SIZE);
 
 void destroiHash (Hash * ha);
+
+int insere_hash_semcolisao (Hash *ha, struct aluno al);
+
+int buscaHash_semColisao (Hash *ha, int mat, struct aluno * al);
+
+int
+verificaOcupacao (Hash * ha);

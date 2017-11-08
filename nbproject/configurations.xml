@@ -27,6 +27,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>../../Dropbox/Ed2/AtividadeED2_05/alunos.txt</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -41,9 +42,15 @@
           <linkerDynSerch>
             <pElem>.</pElem>
             <pElem>.</pElem>
+            <pElem>.</pElem>
           </linkerDynSerch>
         </linkerTool>
       </compileType>
+      <item path="../../Dropbox/Ed2/AtividadeED2_05/alunos.txt"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="TabelaHash.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="TabelaHash.h" ex="false" tool="3" flavor2="0">
@@ -51,6 +58,7 @@
       <folder path="TestFiles">
         <linkerTool>
           <linkerDynSerch>
+            <pElem>.</pElem>
             <pElem>.</pElem>
             <pElem>.</pElem>
           </linkerDynSerch>
@@ -82,9 +90,15 @@
           <linkerDynSerch>
             <pElem>.</pElem>
             <pElem>.</pElem>
+            <pElem>.</pElem>
           </linkerDynSerch>
         </linkerTool>
       </compileType>
+      <item path="../../Dropbox/Ed2/AtividadeED2_05/alunos.txt"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="TabelaHash.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="TabelaHash.h" ex="false" tool="3" flavor2="0">
@@ -92,6 +106,7 @@
       <folder path="TestFiles">
         <linkerTool>
           <linkerDynSerch>
+            <pElem>.</pElem>
             <pElem>.</pElem>
             <pElem>.</pElem>
           </linkerDynSerch>
